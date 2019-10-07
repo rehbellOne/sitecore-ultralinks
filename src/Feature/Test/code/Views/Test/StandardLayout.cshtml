@@ -1,0 +1,27 @@
+﻿
+@model RenderingModel
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+    <body id="PageBody" class="page-body">
+    @Html.Sitecore().Placeholder("PrePageHeader")
+    <header id="PageHeader" class="page-header">
+        @Html.Sitecore().Placeholder("PageHeader")
+    </header>
+    @Html.Sitecore().Placeholder("PostPageHeader")
+    <main id="PageMain" class="page-main">
+        @Html.Sitecore().Placeholder("PageMain")
+    </main>
+    @Html.Sitecore().Placeholder("PrePageFooter")
+    <footer id="PageFooter" class="page-footer">
+        @Html.Sitecore().Placeholder("PageFooter")
+    </footer>
+    @Html.Sitecore().Placeholder("PostPageFooter")
+    </body>
+</html>

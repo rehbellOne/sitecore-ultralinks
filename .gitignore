@@ -1,0 +1,22 @@
+Standard dotnet git ignore file:
+
+lib/license.xml
+lib/Sitecore/*
+!lib/Sitecore/readme.MD
+lib/System/*
+!lib/System/readme.MD
+/.vs
+/target
+temp/
+.vscode
+lib/
+build/assets
+
+/packages
+
+/HelixTemplates
+.helixtemplates
+
+/src/**/bin
+/src/**/obj
+/src/Feature

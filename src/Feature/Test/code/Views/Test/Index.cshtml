@@ -1,0 +1,25 @@
+﻿
+@using System.Collections.Specialized
+
+@model RenderingModel
+
+
+@if (Model != null)
+{
+    <div>
+        @Html.Sitecore().Field("One", Model.Item ?? Model.PageItem)
+    </div>
+    <div>
+        @Html.Sitecore().BeginField("Two", Model.Item ?? Model.PageItem)
+        <span>Test Succeeded Again with Begin & End</span>
+        @Html.Sitecore().EndField()
+    </div>
+    <div>
+        @Html.Sitecore().Field("Three", Model.Item ?? Model.PageItem, new { @id = "FUCKYEAH" })
+    </div>
+
+    <div>
+        @Html.Sitecore().Field("Four", Model.Item ?? Model.PageItem, new { @id = "FUCKYEAHAGAIN!" })
+    </div>
+}
+
