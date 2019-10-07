@@ -21,5 +21,18 @@
     <div>
         @Html.Sitecore().Field("Four", Model.Item ?? Model.PageItem, new { @id = "FUCKYEAHAGAIN!" })
     </div>
+
+
+    <div>
+        @Html.Sitecore().Field("GeneralOne", Model.Item ?? Model.PageItem, new { @id = "GeneralFuck!" })
+        
+
+    </div>
+
+    <div>
+        @Html.Sitecore().Field("GeneralTwo", Model.Item ?? Model.PageItem)
+
+
+    </div>
 }
 
