@@ -4,7 +4,8 @@ define(["sitecore"], function (Sitecore) {
         external: "{5C510D92-6FA4-48EF-AF79-67EE126F5B54}",
         internal: "{012728CF-9457-43C5-97E9-CF68AF236402}",
         email: "{10D7940B-2946-4C07-802F-A2AD5BE012FC}",
-        phone: "{1728B7EA-402B-425D-A009-C8D090EB7799}"
+        phone: "{1728B7EA-402B-425D-A009-C8D090EB7799}",
+        anchor: "{FB373B7C-6A24-4345-A78B-2E6605E923D1}"
     };
   
 	var addDataSourceItem = function(dataSource, nameObj, valueObj) {
@@ -371,7 +372,7 @@ define(["sitecore"], function (Sitecore) {
                         if (selectedItem.itemId !== linkTypeOptions.external) {
                             this.hideForceSecureLinks();                            
                         }
-                        if (selectedItem.itemId !== linkTypeOptions.internal) {
+                        if (selectedItem.itemId !== linkTypeOptions.internal && selectedItem.itemId !== linkTypeOptions.anchor) {
 
                             this.resetToRootItemNode();
                             this.showCustomLink();                            
@@ -379,16 +380,29 @@ define(["sitecore"], function (Sitecore) {
                             this.showDisplayText();
                         }
                         else {
-                            this.hideCustomLink();
-                            this.hideForceSecureLinks();
-                            this.showUseDisplayName();
-                            this.showOpenNewWindow();   
 
-                            if (this.UseDisplayNameCheckBox.get("isChecked") === true) {
-                                this.hideDisplayText();
-                            } else {
-                                this.showDisplayText();                                
+                            if (selectedItem.itemId === linkTypeOptions.anchor) {
+                                this.hideCustomLink();
+                                this.hideForceSecureLinks();
+                                this.hideOpenNewWindow();
+                                this.hideUseDisplayName();
+                                this.showDisplayText();
                             }
+                            else
+                            {
+                                this.hideCustomLink();
+                                this.hideForceSecureLinks();
+                                this.showUseDisplayName();
+                                this.showOpenNewWindow();
+
+                                if (this.UseDisplayNameCheckBox.get("isChecked") === true) {
+                                    this.hideDisplayText();
+                                } else {
+                                    this.showDisplayText();
+                                }
+                            }
+
+                            
                         }
 
                         if (selectedItem.itemId === linkTypeOptions.phone) {

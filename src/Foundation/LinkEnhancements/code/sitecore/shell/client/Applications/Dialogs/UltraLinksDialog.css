@@ -2,6 +2,76 @@
     position: fixed;
 }
 
+
+label[data-sc-id].sc-label {
+    width: 100%;
+    background-color: #818183;
+    color: white;
+    padding-left: 20px;
+}
+
+    label[data-sc-id].sc-label:hover {
+        background-color: black;
+    }
+
+div[data-sc-id=PresentationContainer].sc-border {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    padding: 15px;
+}
+
+
+    div[data-sc-id=PresentationContainer].sc-border label[data-sc-id=LinkTypesLbl].sc-label {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+div[data-sc-id=UseDisplayNameRow].sc-border {
+    margin-bottom: 10px;
+}
+
+label[data-sc-id=UseDisplayNameCheckBox].sc-checkbox {
+    width: 100%;
+}
+
+
+
+div[data-sc-id=PresentationContainer].sc-border label[data-sc-id=LinkTypesLbl].sc-label,
+label[data-sc-id=UseDisplayNameCheckBox].sc-checkbox,
+label[data-sc-id=LinkDisplayTextLbl].sc-label,
+label[data-sc-id=UseDisplayNameLbl].sc-label,
+label[data-sc-id=CustomLinkLbl].sc-label,
+label[data-sc-id=PhoneMasksLbl].sc-label {
+    background-color: #771f1f;
+    color: white;
+}
+
+    div[data-sc-id=PresentationContainer].sc-border label[data-sc-id=LinkTypesLbl].sc-label:hover,
+    label[data-sc-id=UseDisplayNameCheckBox].sc-checkbox:hover,
+    label[data-sc-id=LinkDisplayTextLbl].sc-label:hover,
+    label[data-sc-id=UseDisplayNameLbl].sc-label:hover,
+    label[data-sc-id=PhoneMasksLbl].sc-label:hover,
+    div[data-sc-id=CustomLinkRow].sc-border:hover label,
+    div[data-sc-id=UseDisplayNameRow].sc-border:hover label {
+        background-color: black;
+        color: white;
+    }
+
+
+/*div[data-sc-id=SeoContainer].sc-border label[data-sc-id=ForceSecureLinkCheckBox].sc-checkbox,*/
+/*div[data-sc-id=SeoContainer].sc-border label[data-sc-id=OpenNewWindowCheckBox].sc-checkbox, */
+div[data-sc-id=SeoContainer].sc-border label[data-sc-id=ForceSecureLinkLbl].sc-label,
+div[data-sc-id=SeoContainer].sc-border label[data-sc-id=OpenNewWindowLbl].sc-label {
+    background-color: #771f1f;
+    color: white;
+}
+
+label[data-sc-id=LinkDisplayTextLbl].sc-label {
+    width: 100%;
+    padding-left: 20px;
+}
+
 div[data-sc-id=CustomAttributeTitleContainer].sc-border,
 div[data-sc-id=QueryStringParametersTitleContainer].sc-border {
     margin-top: 10px;
@@ -15,45 +85,17 @@ div[data-sc-id=QueryStringParametersContainer].sc-border {
     flex-wrap: wrap;
 }
 
-div[data-sc-id=UseDisplayNameRow].sc-border {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
-div[data-sc-id=PresentationContainer].sc-border {
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
-    padding: 15px;
-}
 
-div[data-sc-id=UseDisplayNameRow].sc-border {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background-color: #1c6d8d;
-    border: 1px solid grey;
-    padding-left: 20px;
-}
 
-label[data-sc-id=LinkDisplayTextLbl].sc-label {
-    width: 100%;
-    background-color: #1c6d8d;
-    color: white;
-    padding-left: 20px;
-}
+
 
 div[data-sc-id=CustomLinkRow].sc-border {
     margin-top: 2px;
     margin-bottom: 2px;
-    color: white;
-    background-color: #1c6d8d;
-    border: 1px solid grey;
 }
 
-label[data-sc-id=CustomLinkLbl].sc-label {
-    padding-left: 20px;
-}
+
 
 div[data-sc-id=BehaviorContainer].sc-border {
     display: flex;
@@ -73,30 +115,14 @@ div[data-sc-id=SeoContainer].sc-border {
     }
 
 
-    div[data-sc-id=SeoContainer].sc-border label[data-sc-id=ForceSecureLinkLbl].sc-label,
-    div[data-sc-id=SeoContainer].sc-border label[data-sc-id=ForceSecureLinkCheckBox].sc-checkbox,
-    div[data-sc-id=SeoContainer].sc-border label[data-sc-id=OpenNewWindowLbl].sc-label,
-    div[data-sc-id=SeoContainer].sc-border label[data-sc-id=OpenNewWindowCheckBox].sc-checkbox {
-        background-color: #1c6d8d;
-        color: white;
-    }
+
 
 div[data-sc-id=PhoneBehaviorContainer].sc-border {
-    margin-top: 5px;
+    margin-bottom: 5px;
     background-color: #1c6d8d;
     color: white;
     border: 1px solid grey;
 }
-
-input[data-sc-id=LinkDisplayText].sc-textbox {
-    border: 1px solid #1c6d8d;
-}
-
-
-label[data-sc-id=PhoneMasksLbl].sc-label {
-    padding-left: 20px;
-}
-
 
 div[data-sc-id=SeoContainer].sc-border .sc-label {
     flex-basis: 60%;
